@@ -32,12 +32,14 @@ class Authenticate
      */
     protected function authenticate($request)
     {
-        if (Auth::guard(config('app.auth.guard'))->check()) {
+        $guard = config('app.auth.guard');
+
+        if (Auth::guard($guard)->check()) {
             return Auth::shouldUse($guard);
         }
 
         throw new AuthenticationException(
-            'Unauthenticated.', $guards, route('admin.login')
+            'Unauthenticated.', [$guard], route('admin.login')
         );
     }
 }
