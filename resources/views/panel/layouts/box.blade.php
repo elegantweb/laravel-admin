@@ -9,10 +9,10 @@
         </div>
     </div>
     <div class="box-body">
-        @yield('content')
+        @yield('box-body')
     </div>
     <div class="box-footer">
         @yield('box-footer')
     </div>
 </div>
-@overwrite
+@endsection
