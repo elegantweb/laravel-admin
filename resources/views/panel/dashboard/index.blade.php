@@ -3,5 +3,5 @@
 @section('title', trans('admin.dashboard'))
 
 @section('content')
-{{ trans('admin.welcome') }}
+{{ trans('admin.welcome') }}!
 @endsection

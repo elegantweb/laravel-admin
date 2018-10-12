@@ -1,4 +1,6 @@
-<li class="header">{{ trans('admin.main_nav') }}</li>
+<li class="header">
+    {{ trans('admin.main_navigation') }}
+</li>
 
 <li>
     <a href="{{ route('admin.dashboard') }}">
