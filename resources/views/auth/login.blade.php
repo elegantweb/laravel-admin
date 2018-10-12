@@ -37,7 +37,9 @@
             </div>
         </div>
         <div class="col-xs-4">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('admin.login') }}</button>
+            <button type="submit" class="btn btn-primary btn-block btn-flat">
+                {{ trans('admin.login') }}
+            </button>
         </div>
     </div>
 

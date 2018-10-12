@@ -39,8 +39,10 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-4 col-xs-offset-8">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('admin.password_reset') }}</button>
+        <div class="col-xs-6 col-xs-offset-6">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">
+                {{ trans('admin.password_reset') }}
+            </button>
         </div>
     </div>
 </form>

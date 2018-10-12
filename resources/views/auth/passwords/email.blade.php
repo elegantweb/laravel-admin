@@ -18,8 +18,10 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-4 col-xs-offset-8">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('admin.password_reset_send_link') }}</button>
+        <div class="col-xs-8 col-xs-offset-4">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">
+                {{ trans('admin.password_reset_send_link') }}
+            </button>
         </div>
     </div>
 </form>
