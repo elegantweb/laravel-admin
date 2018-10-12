@@ -5,7 +5,7 @@ Route::group([
     'middleware' => config('admin.auth.routes.middleware'),
 ], function () {
 
-    require('admin.auth.php');
+    require('./admin.auth.php');
 
 });
 
@@ -14,6 +14,6 @@ Route::group([
     'middleware' => config('admin.panel.routes.middleware'),
 ], function () {
 
-    require('admin.panel.php');
+    require('./admin.panel.php');
 
 });
