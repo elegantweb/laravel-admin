@@ -1,4 +1,4 @@
-@extends('admin::layouts.base')
+@extends('admin::panel.layouts.base')
 
 @section('title', trans('dashboard'))
 

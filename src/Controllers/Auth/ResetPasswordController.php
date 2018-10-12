@@ -4,11 +4,10 @@ namespace Elegant\Admin\Controllers\Auth;
 
 use Auth;
 use Password;
-use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 
 class ResetPasswordController extends Controller
 {
@@ -23,7 +22,7 @@ class ResetPasswordController extends Controller
     |
     */
 
-    use ResetsPasswords;
+    use ResetsPasswords, ValidatesRequests;
 
     /**
      * Where to redirect users after resetting their password.

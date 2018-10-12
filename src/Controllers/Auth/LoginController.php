@@ -5,6 +5,7 @@ namespace Elegant\Admin\Controllers\Auth;
 use Auth;
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -20,7 +21,7 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    use AuthenticatesUsers, ValidatesRequests;
 
     /**
      * Where to redirect users after login.
@@ -56,6 +57,6 @@ class LoginController extends Controller
      */
     protected function guard()
     {
-        return Auth::guard(config('app.auth.guard'));
+        return Auth::guard(config('admin.auth.guard'));
     }
 }

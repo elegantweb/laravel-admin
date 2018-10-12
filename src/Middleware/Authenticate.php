@@ -32,7 +32,7 @@ class Authenticate
      */
     protected function authenticate($request)
     {
-        $guard = config('app.auth.guard');
+        $guard = config('admin.auth.guard');
 
         if (Auth::guard($guard)->check()) {
             return Auth::shouldUse($guard);
