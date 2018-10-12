@@ -10,6 +10,6 @@
 <!-- Menu Footer-->
 <li class="user-footer">
     <div class="text-center">
-        <a href="{{ admin('admin.logout') }}" class="btn btn-default btn-flat">{{ trans('admin.logout') }}</a>
+        <a href="{{ route('admin.logout') }}" class="btn btn-default btn-flat">{{ trans('admin.logout') }}</a>
     </div>
 </li>

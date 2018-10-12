@@ -24,7 +24,7 @@ return [
     ],
 
     'panel' => [
-        'skin' => 'blue-light',
+        'skin' => 'skin-blue-light',
         'layout' => ['sidebar-mini'],
 
         'routes' => [
