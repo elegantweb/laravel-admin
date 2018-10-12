@@ -29,7 +29,7 @@ acorn@^6.0.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.0.2.tgz#6a459041c320ab17592c6317abbfdf4bbaa98ca4"
   integrity sha512-GXmKIvbrN3TV7aVqAzVFaMW8F8wzVX7voEBRO3bDA64+EX37YSayggRJP5Xig6HYHBkWKpFg9W5gg6orklubhg==
 
-admin-lte@^2.4.8:
+admin-lte@2.4.*:
   version "2.4.8"
   resolved "https://registry.yarnpkg.com/admin-lte/-/admin-lte-2.4.8.tgz#35edb2b7857af7fcfed7355c83649d5abd09a501"
   integrity sha512-Gr/jb9bP2psiN20o+1mCSwnjIJZX59Od2BtBI1ew09QFarsvf8AEX/FbbCGcSBtqk6Qs1q5YcIf2N6mFWj3iKg==
