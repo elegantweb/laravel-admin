@@ -18,6 +18,8 @@ Route::group([
     'namespace' => config('admin.auth.routes.namespace'),
 ], function () {
 
-    require(base_path('routes/admin.auth.php'));
+    if (file_exists($path = base_path('routes/admin.auth.php'))) {
+        require($path);
+    }
 
 });
