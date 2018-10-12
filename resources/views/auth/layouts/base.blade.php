@@ -13,7 +13,7 @@
 </head>
 <body class="hold-transition login-page @yield('body-class')">
     @include('admin::auth.partials.body')
-    <script src="{{ asset('vendor/laravel-admin/node_modules/jquery/dist/jquery.min.css') }}"></script>
+    <script src="{{ asset('vendor/laravel-admin/node_modules/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/laravel-admin/node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('vendor/laravel-admin/node_modules/admin-lte/plugins/iCheck/icheck.min.js') }}"></script>
     <script>$('input').iCheck({ checkboxClass: 'icheckbox_square-blue', radioClass: 'iradio_square-blue', increaseArea: '20%' })</script>

@@ -13,7 +13,7 @@
 </head>
 <body class="hold-transition {{ config('admin.panel.skin') }} {{ join(config('admin.panel.layout'), ' ') }} @yield('body-class')">
     @include('admin::panel.partials.body')
-    <script src="{{ asset('vendor/laravel-admin/node_modules/jquery/dist/jquery.min.css') }}"></script>
+    <script src="{{ asset('vendor/laravel-admin/node_modules/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/laravel-admin/node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('vendor/laravel-admin/node_modules/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
     <script src="{{ asset('vendor/laravel-admin/node_modules/fastclick/lib/fastclick.js') }}"></script>
