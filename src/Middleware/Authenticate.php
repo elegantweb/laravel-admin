@@ -31,7 +31,7 @@ class Authenticate
      */
     protected function authenticate($request)
     {
-        if (Auth::guard($guard)->check()) {
+        if (Auth::guard(config('app.auth.guard'))->check()) {
             return Auth::shouldUse($guard);
         }
 
