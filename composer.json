@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Elegant\\Admin": "src/"
+            "Elegant\\Admin\\": "src/"
         }
     },
     "extra": {
