@@ -1,7 +1,7 @@
 <?php
 
 Route::group([
-    'namespace' => 'Elegant\Admin\Http\Controllers\Auth',
+    'namespace' => 'Elegant\Admin\Controllers\Auth',
 ], function () {
 
     Route::get('logout', 'LoginController@logout')->name('logout');
@@ -9,7 +9,7 @@ Route::group([
 });
 
 Route::group([
-    'namespace' => 'Elegant\Admin\Http\Controllers\Panel',
+    'namespace' => 'Elegant\Admin\Controllers\Panel',
 ], function () {
 
     Route::get('/', 'DashboardController@index')->name('dashboard');

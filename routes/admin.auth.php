@@ -1,7 +1,7 @@
 <?php
 
 Route::group([
-    'namespace' => 'Elegant\Admin\Http\Controllers\Auth',
+    'namespace' => 'Elegant\Admin\Controllers\Auth',
 ], function () {
 
     Route::get('login', 'LoginController@showLoginForm')->name('login');
