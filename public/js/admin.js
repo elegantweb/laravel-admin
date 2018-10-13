@@ -1,3 +1,15 @@
+/* Fix jQuery */
+
+$.ajaxSetup({
+    beforeSend: function (xhr) {
+        if (testSameOrigin(this.url)) {
+            xhr.setRequestHeader('X-CSRF-TOKEN', document.head.querySelector('meta[name="csrf-token"]').content)
+        }
+    }
+});
+
+/* Fix DataTables */
+
 $.extend(true, $.fn.dataTable.defaults, {
     processing: true,
     buttons: [],
@@ -12,3 +24,23 @@ $(document).on('preDraw.dt', function (e, settings) {
         $(api.tables().containers()).find('.dt-buttons-col').hide();
     }
 });
+
+/* Fix DataTables Buttons */
+
+$.extend(true, $.fn.dataTable.Buttons.defaults, {
+    dom: {
+        button: {
+            className: 'btn btn-default btn-sm'
+        }
+    }
+});
+
+/* Utils */
+
+function testSameOrigin(url) {
+    var a = document.createElement('a');
+    a.href = url;
+    return a.hostname == window.location.hostname
+           && a.port == window.location.port
+           && a.protocol == window.location.protocol;
+}
