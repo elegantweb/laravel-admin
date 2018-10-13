@@ -5,7 +5,7 @@
             {{ $tools ?? '' }}
         </div>
     </div>
-    <div class="box-body">
+    <div class="box-body {{ $bodyClass ?? '' }}">
         {{ $body ?? '' }}
     </div>
     <div class="box-footer">

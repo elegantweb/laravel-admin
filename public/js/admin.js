@@ -13,8 +13,8 @@ $.ajaxSetup({
 $.extend(true, $.fn.dataTable.defaults, {
     processing: true,
     buttons: [],
-	dom: "<'row'<'col-sm-auto'l><'col-sm-auto-right dt-buttons-col'B><'col-sm-auto-right'f>>"+
-		 "<'table-responsive'tr>"+
+	dom: "<'row'<'col-sm-auto'l><'col-sm-auto-right dt-buttons-col'B><'col-sm-auto-right'f>>" +
+		 "<'table-responsive'tr>" +
 		 "<'row'<'col-sm-5'i><'col-sm-7'p>>"
 });
 
@@ -40,7 +40,7 @@ $.extend(true, $.fn.dataTable.Buttons.defaults, {
 function testSameOrigin(url) {
     var a = document.createElement('a');
     a.href = url;
-    return a.hostname == window.location.hostname
-           && a.port == window.location.port
-           && a.protocol == window.location.protocol;
+    return a.hostname == window.location.hostname &&
+           a.port == window.location.port &&
+           a.protocol == window.location.protocol;
 }
