@@ -1,5 +1,5 @@
 <li>
-    <a href="/" target="_blank">View Website</a>
+    <a href="{{ url('/') }}" target="_blank">View Website</a>
 </li>
 
 <li class="dropdown user user-menu">
