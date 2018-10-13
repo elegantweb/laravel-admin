@@ -8,7 +8,9 @@
     <div class="box-body {{ $bodyClass ?? '' }}">
         {{ $body ?? '' }}
     </div>
-    <div class="box-footer">
-        {{ $footer ?? '' }}
-    </div>
+    @if (isset($footer))
+        <div class="box-footer">
+            {{ $footer }}
+        </div>
+    @endif
 </div>

@@ -32,11 +32,3 @@ div.table-responsive {
 div.table-responsive > table.dataTable {
     margin: 0 !important;
 }
-
-/* DataTables Buttons */
-
-@media screen and (max-width: 767px) {
-    div.dt-buttons button.btn {
-        float: none;
-    }
-}
