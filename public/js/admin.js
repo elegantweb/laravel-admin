@@ -2,7 +2,7 @@
 
 $.ajaxSetup({
     beforeSend: function (xhr) {
-        if (testSameOrigin(this.url)) {
+        if ($(`<a href="${this.url}">`).get(0).origin === window.location.origin) {
             xhr.setRequestHeader('X-CSRF-TOKEN', document.head.querySelector('meta[name="csrf-token"]').content)
         }
     }
@@ -18,12 +18,16 @@ $.extend(true, $.fn.dataTable.defaults, {
 		 "<'row'<'col-sm-5'i><'col-sm-7'p>>"
 });
 
-/* Utils */
+/* Sidebar Menu State */
 
-function testSameOrigin(url) {
-    var a = document.createElement('a');
-    a.href = url;
-    return a.hostname == window.location.hostname &&
-           a.port == window.location.port &&
-           a.protocol == window.location.protocol;
-}
+$('.sidebar-menu a').each(function () {
+    if (this.origin === window.location.origin && this.pathname === window.location.pathname) {
+        $(this).parentsUntil('.sidebar-menu', 'li').addClass('active');
+    }
+});
+
+$('.sidebar-menu li.treeview > a').each(function () {
+    if (this.origin === window.location.origin && window.location.pathname.startsWith(this.pathname)) {
+        $(this).parent().addClass('active');
+    }
+});
