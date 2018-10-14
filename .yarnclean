@@ -1,12 +1,14 @@
 # binaries
 bin
 .bin
+bin.js
 
 # test directories
 __tests__
 test
 tests
 powered-test
+test.js
 
 # asset directories
 docs
@@ -46,8 +48,10 @@ wercker.yml
 .jshintrc
 .flowconfig
 .documentup.json
+.yarn-integrity
 .yarn-metadata.json
 .travis.yml
+.zuul.yml
 
 # misc
 *.md
