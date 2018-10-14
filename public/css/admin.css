@@ -32,3 +32,13 @@ div.table-responsive {
 div.table-responsive > table.dataTable {
     margin: 0 !important;
 }
+
+/* Utils */
+
+.display-inline {
+    display: inline !important;
+}
+
+.display-inline-block {
+    display: inline-block !important;
+}
