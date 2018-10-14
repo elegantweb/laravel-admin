@@ -1,17 +1,17 @@
 @if (session('status'))
-    <div class="alert alert-success">
+    @component('admin::components.alert', ['varient' => 'success'])
         {{ session('status') }}
-    </div>
+    @endcomponent
 @endif
 
 @if (session('status:success'))
-    <div class="alert alert-success">
+    @component('admin::components.alert', ['varient' => 'success'])
         {{ session('status:success') }}
-    </div>
+    @endcomponent
 @endif
 
-@if (session('status:error'))
-    <div class="alert alert-danger">
-        {{ session('status:error') }}
-    </div>
+@if (session('status:failure'))
+    @component('admin::components.alert', ['varient' => 'danger'])
+        {{ session('status:failure') }}
+    @endcomponent
 @endif
