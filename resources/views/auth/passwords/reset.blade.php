@@ -1,7 +1,7 @@
 @extends('admin::auth.layouts.base')
 
-@section('title', trans('admin.password_reset'))
-@section('message', trans('admin.password_reset_message'))
+@section('title', trans('admin::messages.password_reset'))
+@section('description', trans('admin::messages.password_reset_start'))
 
 @section('content')
 <form method="POST" action="{{ route('admin.password.request') }}">
@@ -41,7 +41,7 @@
     <div class="row">
         <div class="col-xs-6 col-xs-offset-6">
             <button type="submit" class="btn btn-primary btn-block btn-flat">
-                {{ trans('admin.password_reset') }}
+                {{ trans('admin::messages.password_reset') }}
             </button>
         </div>
     </div>

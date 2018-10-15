@@ -1,7 +1,7 @@
 @extends('admin::auth.layouts.base')
 
-@section('title', trans('admin.login'))
-@section('message', trans('admin.login_message'))
+@section('title', trans('admin::messages.login'))
+@section('description', trans('admin::messages.login_start'))
 
 @section('content')
 <form method="POST" action="{{ route('admin.login') }}">
@@ -32,17 +32,19 @@
             <div class="checkbox icheck">
                 <label>
                     <input type="checkbox" name="remember"{{ old('remember') ? ' checked' : '' }}>
-                    {{ trans('admin.rememeber') }}
+                    {{ trans('admin::messages.rememeber') }}
                 </label>
             </div>
         </div>
         <div class="col-xs-4">
             <button type="submit" class="btn btn-primary btn-block btn-flat">
-                {{ trans('admin.login') }}
+                {{ trans('admin::messages.login') }}
             </button>
         </div>
     </div>
 
-    <a href="{{ route('admin.password.request') }}">I forgot my password</a><br>
+    <a href="{{ route('admin.password.request') }}">
+        I forgot my password
+    </a>
 </form>
 @endsection

@@ -6,6 +6,6 @@ Route::group([
     'middleware' => config('admin.routes.middleware'),
 ], function () {
 
-    require(__DIR__.'/admin.php');
+    require('web.admin.php');
 
 });

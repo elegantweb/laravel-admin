@@ -21,13 +21,14 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'admin');
+
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'admin');
 
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([__DIR__.'/../config' => config_path()], 'laravel-admin-config');
-            $this->publishes([__DIR__.'/../resources/lang' => resource_path('lang')], 'laravel-admin-lang');
             $this->publishes([__DIR__.'/../resources/views' => resource_path('views/vendor/admin'),], 'laravel-admin-views');
             $this->publishes([__DIR__.'/../public' => public_path('vendor/admin')], 'laravel-admin-public');
         }

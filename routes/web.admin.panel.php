@@ -20,7 +20,7 @@ Route::group([
     'namespace' => config('admin.panel.routes.namespace'),
 ], function () {
 
-    if (file_exists($path = base_path('routes/admin.panel.php'))) {
+    if (file_exists($path = base_path('routes/web.admin.panel.php'))) {
         require($path);
     }
 

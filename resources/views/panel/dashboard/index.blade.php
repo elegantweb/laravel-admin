@@ -1,7 +1,7 @@
 @extends('admin::panel.layouts.base')
 
-@section('title', trans('admin.dashboard'))
+@section('title', trans('admin::messages.dashboard'))
 
 @section('content')
-{{ trans('admin.welcome') }}!
+{{ trans('welcome') }}
 @endsection
