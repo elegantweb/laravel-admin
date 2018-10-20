@@ -14,6 +14,8 @@ Route::group([
 
     Route::get('/', 'DashboardController@index')->name('dashboard');
 
+    Route::get('/notifications', 'NotificationController@index')->name('notifications');
+
 });
 
 Route::group([

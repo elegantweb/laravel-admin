@@ -1,14 +1,14 @@
 @extends('admin::auth.layouts.base')
 
 @section('title', trans('admin::messages.login'))
-@section('description', trans('admin::messages.login_start'))
+@section('message', trans('admin::messages.login_page_message'))
 
 @section('content')
 <form method="POST" action="{{ route('admin.login') }}">
     {{ csrf_field() }}
 
     <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
-        <input type="email" class="form-control" name="email" placeholder="Email" value="{{ old('email') }}" required autofocus>
+        <input type="email" class="form-control" name="email" placeholder="{{ trans('admin::messages.email') }}" value="{{ old('email') }}" required autofocus>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         @if ($errors->has('email'))
             <span class="help-block">
@@ -18,7 +18,7 @@
     </div>
 
     <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-        <input type="password" class="form-control" name="password" placeholder="Password" required>
+        <input type="password" class="form-control" name="password" placeholder="{{ trans('admin::messages.password') }}" required>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         @if ($errors->has('password'))
             <span class="help-block">
@@ -32,7 +32,7 @@
             <div class="checkbox icheck">
                 <label>
                     <input type="checkbox" name="remember"{{ old('remember') ? ' checked' : '' }}>
-                    {{ trans('admin::messages.rememeber') }}
+                    {{ trans('admin::messages.rememeber_me') }}
                 </label>
             </div>
         </div>
@@ -44,7 +44,7 @@
     </div>
 
     <a href="{{ route('admin.password.request') }}">
-        I forgot my password
+        {{ trans('admin::messages.i_forgot_my_password') }}
     </a>
 </form>
 @endsection

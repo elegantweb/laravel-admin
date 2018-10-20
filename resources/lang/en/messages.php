@@ -2,17 +2,26 @@
 
 return [
 
+    'home' => 'Home',
     'dashboard' => 'Dashboard',
     'welcome' => 'Welcome',
     'version' => 'Version',
     'login' => 'Login',
-    'login_start' => 'Login to start your session',
     'logout' => 'Logout',
-    'rememeber' => 'Remember Me',
-    'password_reset' => 'Reset Password',
-    'password_reset_start' => 'Reset your password',
-    'password_reset_send_link' => 'Send Reset Password Link',
-    'copyright' => 'Copyright &copy; :date.',
-    'rights' => 'All rights reserved.',
+    'email' => 'Email',
+    'password' => 'Password',
+    'password_confirmation' => 'Confirm Password',
+    'rememeber_me' => 'Remember Me',
+    'reset_password' => 'Reset Password',
+    'send_rest_password_link' => 'Send Reset Password Link',
+    'i_forgot_my_password' => 'I forgot my password',
+    'notifications' => 'Notifications',
+    'view_all' => 'View All',
+
+    'login_page_message' => 'Login to start your session',
+    'reset_password_page_message' => 'Reset your password',
+    'notifications_menu_header' => 'You have :count notifications',
+
+    'copyright' => '<strong>Copyright © :date <a href="https://elegantweb.ir">Elegant Web</a>.</strong> All rights reserved.',
 
 ];
