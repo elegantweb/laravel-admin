@@ -16,7 +16,7 @@
 <ul class="nav nav-pills nav-stacked">
     @forelse ($notifications as $notification)
         @include("admin::notifications.{$notification->type}")
-    @else
+    @empty
         <li class="nav-text">No notifications.</li>
     @endforelse
 </ul>
