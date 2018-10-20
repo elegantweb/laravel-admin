@@ -15,6 +15,8 @@
         </ul>
     </li>
     <li class="footer">
-        <a href="{{ route('admin.notifications') }}">{{ trans('admin::messages.view_all') }}</a>
+        <a href="{{ route('admin.notifications.index') }}">
+            {{ trans('admin::messages.view_all') }}
+        </a>
     </li>
 </ul>
