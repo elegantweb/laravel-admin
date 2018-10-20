@@ -17,6 +17,7 @@ return [
     'i_forgot_my_password' => 'I forgot my password',
     'notifications' => 'Notifications',
     'view_all' => 'View All',
+    'list' => 'List',
 
     'login_page_message' => 'Login to start your session',
     'reset_password_page_message' => 'Reset your password',

@@ -10,13 +10,15 @@
 
 @section('content')
 @component('admin::components.box')
-@slot('title', 'All')
-@slot('body-class', 'no-padding')
+@slot('title', trans('admin::messages.list'))
+@slot('bodyClass', 'no-padding')
 @slot('body')
 <ul class="nav nav-pills nav-stacked">
-    @foreach ($notifications as $notification)
+    @forelse ($notifications as $notification)
         @include("admin::notifications.{$notification->type}")
-    @endforeach
+    @else
+        <li class="nav-text">No notifications.</li>
+    @endforelse
 </ul>
 @endslot
 @slot('footer')
