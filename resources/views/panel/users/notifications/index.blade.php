@@ -11,12 +11,12 @@
 @section('content')
 <div class="nav-tabs-custom">
     <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
+        <li class="{{ request()->input('all') ? '' : 'active' }}">
             <a href="{{ route('users.notifications.index') }}">
                 Unread
             </a>
         </li>
-        <li>
+        <li class="{{ request()->input('all') ? 'active' : '' }}">
             <a href="{{ route('users.notifications.index', ['all' => '1']) }}">
                 All
             </a>

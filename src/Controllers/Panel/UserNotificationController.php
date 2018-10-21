@@ -8,9 +8,11 @@ use Illuminate\Routing\Controller;
 
 class UserNotificationController extends Controller
 {
-    public function index(Request $request, User $user)
+    public function index(Request $request, $user)
     {
-        abort_unless(Auth::user()->id === $user->id, 403);
+        abort_unless(Auth::user()->id === $user, 403);
+
+        $user = Auth::user();
 
         $all = $request->input('all', 0);
 
