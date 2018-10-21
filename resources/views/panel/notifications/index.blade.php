@@ -22,7 +22,7 @@
             </a>
         </li>
     </ul>
-    <div class="tab-content">
+    <div class="tab-content no-padding">
         <div class="tab-pane active">
             <ul class="notifications-nav nav nav-pills nav-stacked">
                 @forelse ($notifications as $notification)
@@ -31,10 +31,18 @@
                     <li class="nav-text">No notifications.</li>
                 @endforelse
             </ul>
-            @if (request()->input('all'))
-                {{ $notifications->links('admin::pagination.simple-default') }}
-            @endif
         </div>
     </div>
+    @if (request()->input('all'))
+        <div class="tab-content">
+            <div class="tab-pane active">
+                <div class="clearfix">
+                    @if (request()->input('all'))
+                        {{ $notifications->links('admin::pagination.simple-default') }}
+                    @endif
+                </div>
+            </div>
+        </div>
+    @endif
 </div>
 @endsection
