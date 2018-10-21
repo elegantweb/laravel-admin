@@ -15,6 +15,6 @@ class NotificationsMenuComposer
      */
     public function compose(View $view)
     {
-        $view->with('notifications', Auth::user()->unreadNotifications);
+        $view->with('count', Auth::user()->unreadNotifications()->count());
     }
 }
