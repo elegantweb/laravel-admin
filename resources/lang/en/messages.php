@@ -23,6 +23,6 @@ return [
     'reset_password_page_message' => 'Reset your password',
     'notifications_menu_header' => 'You have :count unread notifications',
 
-    'copyright' => '<strong>Copyright © :date <a href="https://elegantweb.ir">Elegant Web</a>.</strong> All rights reserved.',
+    'copyright' => '<strong>Copyright © :date <a href="https://elegantweb.ir" target="_blank">Elegant Web</a>.</strong> All rights reserved.',
 
 ];

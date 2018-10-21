@@ -9,5 +9,5 @@
 @endpush
 
 @section('content')
-{{ trans('welcome') }}
+{{ trans('admin::messages.welcome') }}
 @endsection
