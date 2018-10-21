@@ -12,7 +12,7 @@ class NotificationController extends Controller
     {
         $user = Auth::user();
 
-        $notifications = $user->notifications()->simplePaginate(30);
+        $notifications = $user->notifications()->simplePaginate(15);
 
         $notifications->markAsRead();
 

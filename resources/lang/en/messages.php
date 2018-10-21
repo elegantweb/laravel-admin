@@ -21,7 +21,7 @@ return [
 
     'login_page_message' => 'Login to start your session',
     'reset_password_page_message' => 'Reset your password',
-    'notifications_menu_header' => 'You have :count notifications',
+    'notifications_menu_header' => 'You have :count unread notifications',
 
     'copyright' => '<strong>Copyright © :date <a href="https://elegantweb.ir">Elegant Web</a>.</strong> All rights reserved.',
 

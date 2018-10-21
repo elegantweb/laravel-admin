@@ -8,7 +8,7 @@
     <div class="box-body {{ $bodyClass ?? '' }}">
         {{ $body ?? '' }}
     </div>
-    @if (isset($footer) and false == empty(trim($footer)))
+    @if (isset($footer))
         <div class="box-footer">
             {{ $footer }}
         </div>

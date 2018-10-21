@@ -22,7 +22,7 @@
 </ul>
 @endslot
 @slot('footer')
-{{ $notifications->links() }}
+{{ $notifications->links('admin::pagination.simple-default') }}
 @endslot
 @endcomponent
 @endsection
