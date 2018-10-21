@@ -12,13 +12,13 @@
 <div class="nav-tabs-custom">
     <ul class="nav nav-tabs" role="tablist">
         <li class="{{ request()->input('all') ? '' : 'active' }}">
-            <a href="{{ route('users.notifications.index') }}">
-                Unread
+            <a href="{{ route('admin.notifications.index') }}">
+                {{ trans('admin::messages.unread') }}
             </a>
         </li>
         <li class="{{ request()->input('all') ? 'active' : '' }}">
-            <a href="{{ route('users.notifications.index', ['all' => '1']) }}">
-                All
+            <a href="{{ route('admin.notifications.index', ['all' => '1']) }}">
+                {{ trans('admin::messages.all') }}
             </a>
         </li>
     </ul>
@@ -26,15 +26,14 @@
         <div class="tab-pane active">
             <ul class="notifications-nav nav nav-pills nav-stacked">
                 @forelse ($notifications as $notification)
-                    <li class="{{ $notification->unread ? 'unread' : '' }}">
-                        @include("admin::notifications.{$notification->type}")
-                    </li>
+                    <li>@include("admin::notifications.{$notification->type}")</li>
                 @empty
-                    <li class="nav-text">
-                        No notifications.
-                    </li>
+                    <li class="nav-text">No notifications.</li>
                 @endforelse
             </ul>
+            @if (request()->input('all'))
+                {{ $notifications->links('admin::pagination.simple-default') }}
+            @endif
         </div>
     </div>
 </div>

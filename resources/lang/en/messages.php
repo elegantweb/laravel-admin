@@ -16,12 +16,13 @@ return [
     'send_rest_password_link' => 'Send Reset Password Link',
     'i_forgot_my_password' => 'I forgot my password',
     'notifications' => 'Notifications',
+    'all' => 'All',
     'view_all' => 'View All',
     'list' => 'List',
+    'unread' => 'Unread',
 
     'login_page_message' => 'Login to start your session',
     'reset_password_page_message' => 'Reset your password',
-    'notifications_menu_header' => 'You have :count unread notifications',
 
     'copyright' => '<strong>Copyright © :date <a href="https://elegantweb.ir" target="_blank">Elegant Web</a>.</strong> All rights reserved.',
 
