@@ -13,13 +13,3 @@ Route::group([
     Route::post('password/reset', 'ResetPasswordController@reset');
 
 });
-
-Route::group([
-    'namespace' => config('admin.auth.routes.namespace'),
-], function () {
-
-    if (file_exists($path = base_path('routes/web.admin.auth.php'))) {
-        require($path);
-    }
-
-});

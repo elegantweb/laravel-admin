@@ -17,13 +17,3 @@ Route::group([
     Route::get('/notifications', 'NotificationController@index')->name('notifications.index');
 
 });
-
-Route::group([
-    'namespace' => config('admin.panel.routes.namespace'),
-], function () {
-
-    if (file_exists($path = base_path('routes/web.admin.panel.php'))) {
-        require($path);
-    }
-
-});
