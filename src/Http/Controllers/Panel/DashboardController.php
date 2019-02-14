@@ -1,6 +1,6 @@
 <?php
 
-namespace Elegant\Admin\Controllers\Panel;
+namespace Elegant\Admin\Http\Controllers\Panel;
 
 use Illuminate\Routing\Controller;
 

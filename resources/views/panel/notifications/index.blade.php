@@ -11,12 +11,12 @@
 @section('content')
 <div class="nav-tabs-custom">
     <ul class="nav nav-tabs" role="tablist">
-        <li class="{{ request()->input('all') ? '' : 'active' }}">
+        <li class="{{ $all ? '' : 'active' }}">
             <a href="{{ route('admin.notifications.index') }}">
                 {{ trans('admin::messages.unread') }}
             </a>
         </li>
-        <li class="{{ request()->input('all') ? 'active' : '' }}">
+        <li class="{{ $all ? 'active' : '' }}">
             <a href="{{ route('admin.notifications.index', ['all' => '1']) }}">
                 {{ trans('admin::messages.all') }}
             </a>
@@ -33,13 +33,11 @@
             </ul>
         </div>
     </div>
-    @if (request()->input('all'))
+    @if ($all)
         <div class="tab-content">
             <div class="tab-pane active">
                 <div class="clearfix">
-                    @if (request()->input('all'))
-                        {{ $notifications->links('admin::pagination.simple-default') }}
-                    @endif
+                    {{ $notifications->links('admin::pagination.simple-default') }}
                 </div>
             </div>
         </div>

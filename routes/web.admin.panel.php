@@ -1,19 +1,7 @@
 <?php
 
-Route::group([
-    'namespace' => 'Elegant\Admin\Controllers\Auth',
-], function () {
+Route::get('/', 'Panel\DashboardController@index')->name('dashboard');
 
-    Route::get('logout', 'LoginController@logout')->name('logout');
+Route::get('notifications', 'Panel\NotificationController@index')->name('notifications.index');
 
-});
-
-Route::group([
-    'namespace' => 'Elegant\Admin\Controllers\Panel',
-], function () {
-
-    Route::get('/', 'DashboardController@index')->name('dashboard');
-
-    Route::get('/notifications', 'NotificationController@index')->name('notifications.index');
-
-});
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');

@@ -1,6 +1,6 @@
 <?php
 
-namespace Elegant\Admin\Controllers\Auth;
+namespace Elegant\Admin\Http\Controllers\Auth;
 
 use Auth;
 use Illuminate\Routing\Controller;

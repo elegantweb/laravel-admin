@@ -18,15 +18,15 @@ class AdminServiceProvider extends ServiceProvider
      * @var array
      */
     protected $viewComposers = [
-        'admin::panel.partials.notifications-menu' => ViewComposers\NotificationsMenuComposer::class
+        'admin::panel.partials.notifications-menu' => Http\View\Composers\NotificationsMenuComposer::class
     ];
 
     /**
      * @var array
      */
     protected $routeMiddleware = [
-        'admin.auth' => Middleware\Authenticate::class,
-        'admin.guest' => Middleware\RedirectIfAuthenticated::class,
+        'admin.auth' => Http\Middleware\Authenticate::class,
+        'admin.guest' => Http\Middleware\RedirectIfAuthenticated::class,
     ];
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Elegant\Admin\ViewComposers;
+namespace Elegant\Admin\Http\View\Composers;
 
 use Auth;
 use Illuminate\View\View;
