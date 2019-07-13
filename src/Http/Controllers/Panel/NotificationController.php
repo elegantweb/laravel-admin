@@ -23,6 +23,8 @@ class NotificationController extends Controller
 
     protected function notifications($all)
     {
+        $user = Auth::user();
+        
         if ($all) {
             return $user->notifications()->simplePaginate(15);
         } else {
