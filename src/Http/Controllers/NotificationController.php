@@ -1,6 +1,6 @@
 <?php
 
-namespace Elegant\Admin\Http\Controllers\Panel;
+namespace Elegant\Admin\Http\Controllers;
 
 use Auth;
 use Illuminate\Http\Request;
@@ -18,13 +18,13 @@ class NotificationController extends Controller
 
         $notifications->markAsRead();
 
-        return view('admin::panel.notifications.index', compact('all', 'notifications'));
+        return view('admin::notifications.index', compact('all', 'notifications'));
     }
 
     protected function notifications($all)
     {
         $user = Auth::user();
-        
+
         if ($all) {
             return $user->notifications()->simplePaginate(15);
         } else {
