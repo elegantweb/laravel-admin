@@ -18,7 +18,7 @@ class AdminServiceProvider extends ServiceProvider
      * @var array
      */
     protected $viewComposers = [
-        'admin::panel.partials.notifications-menu' => Http\View\Composers\NotificationsMenuComposer::class
+        'admin::partials.notifications-menu' => Http\View\Composers\NotificationsMenuComposer::class
     ];
 
     /**

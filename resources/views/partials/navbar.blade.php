@@ -9,7 +9,7 @@
 
     <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-            @include('admin::panel.partials.navbar-items')
+            @include('admin::partials.navbar-items')
         </ul>
     </div>
 </nav>

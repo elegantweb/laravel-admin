@@ -1,4 +1,4 @@
-@extends('admin::panel.layouts.base')
+@extends('admin::layouts.base')
 
 @section('title', trans('admin::messages.notifications'))
 

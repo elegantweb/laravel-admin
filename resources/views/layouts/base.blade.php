@@ -15,7 +15,7 @@
     @stack('styles')
 </head>
 <body class="hold-transition {{ config('admin.panel.skin') }} {{ join(config('admin.panel.layout'), ' ') }} @yield('body-class')">
-    @include('admin::panel.partials.body')
+    @include('admin::partials.body')
     <script src="{{ asset('vendor/admin/components/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/admin/components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('vendor/admin/components/fastclick/lib/fastclick.js') }}"></script>

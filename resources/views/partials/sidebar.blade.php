@@ -1,5 +1,5 @@
 <aside class="main-sidebar">
     <section class="sidebar">
-        @include('admin::panel.partials.sidebar-menu')
+        @include('admin::partials.sidebar-menu')
     </section>
 </aside>

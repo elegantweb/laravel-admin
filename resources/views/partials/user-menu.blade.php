@@ -4,5 +4,5 @@
 </a>
 
 <ul class="dropdown-menu">
-    @include('admin::panel.partials.user-menu-items')
+    @include('admin::partials.user-menu-items')
 </ul>
