@@ -9,8 +9,8 @@
         {{ $body ?? '' }}
     </div>
     @if (isset($footer))
-        <div class="box-footer">
-            {{ $footer }}
-        </div>
+    <div class="box-footer">
+        {{ $footer }}
+    </div>
     @endif
 </div>
