@@ -26,7 +26,7 @@
         <div class="tab-pane active">
             <ul class="notifications-nav nav nav-pills nav-stacked">
                 @forelse ($notifications as $notification)
-                    <li>@include("admin::notifications.{$notification->type}")</li>
+                    <li>@include(sprintf('admin::notifications.%s', kebab_case(class_basename($notification->type))))</li>
                 @empty
                     <li class="nav-text">No notifications.</li>
                 @endforelse
@@ -34,13 +34,13 @@
         </div>
     </div>
     @if ($all)
-        <div class="tab-content">
-            <div class="tab-pane active">
-                <div class="clearfix">
-                    {{ $notifications->links('admin::pagination.simple-default') }}
-                </div>
+    <div class="tab-content">
+        <div class="tab-pane active">
+            <div class="clearfix">
+                {{ $notifications->links('admin::pagination.simple-default') }}
             </div>
         </div>
+    </div>
     @endif
 </div>
 @endsection
