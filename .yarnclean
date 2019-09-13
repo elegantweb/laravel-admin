@@ -9,6 +9,8 @@ test
 tests
 powered-test
 test.js
+test.html
+.testem.json
 
 # asset directories
 docs
@@ -24,6 +26,7 @@ less
 # examples
 example
 examples
+samples
 
 # code coverage directories
 coverage
@@ -41,10 +44,12 @@ codeship-services.yml
 codeship-steps.yml
 wercker.yml
 .tern-project
+.github
 .gitattributes
 .editorconfig
 .*ignore
 .eslintrc
+.eslintrc.js
 .jshintrc
 .flowconfig
 .documentup.json
@@ -52,6 +57,7 @@ wercker.yml
 .yarn-metadata.json
 .travis.yml
 .zuul.yml
+.codeclimate.yml
 
 # misc
 *.md
