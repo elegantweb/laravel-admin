@@ -18,8 +18,8 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard(config('admin.auth.guard'))->check()) {
             return redirect()->route('admin.dashboard');
-        } else {
-            return $next($request);
         }
+        
+        return $next($request);
     }
 }
