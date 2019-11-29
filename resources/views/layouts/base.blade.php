@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ asset('vendor/admin/css/admin.css') }}">
     @stack('styles')
 </head>
-<body class="hold-transition {{ config('admin.panel.skin') }} {{ join(config('admin.panel.layout'), ' ') }} @yield('body-class')">
+<body class="hold-transition {{ config('admin.panel.skin') }} {{ join(' ', config('admin.panel.layout')) }} @yield('body-class')">
     @include('admin::partials.body')
     <script src="{{ asset('vendor/admin/components/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/admin/components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
