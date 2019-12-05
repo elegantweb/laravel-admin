@@ -2,8 +2,9 @@
 
 namespace Elegant\Admin\Http\Controllers\Auth;
 
-use Auth;
-use Password;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Password;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\ResetsPasswords;
@@ -49,7 +50,7 @@ class ResetPasswordController extends Controller
      */
     protected function rules()
     {
-        $rules = array_only(config('admin.users.rules', []), ['password']);
+        $rules = Arr::only(config('admin.users.rules', []), ['password']);
         $rules += parent::rules();
         return $rules;
     }

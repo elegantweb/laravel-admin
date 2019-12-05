@@ -2,7 +2,7 @@
 
 namespace Elegant\Admin\Http\Controllers\Auth;
 
-use Password;
+use Illuminate\Support\Facades\Password;
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 use Illuminate\Foundation\Validation\ValidatesRequests;

@@ -2,7 +2,7 @@
 
 namespace Elegant\Admin;
 
-use View;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AdminServiceProvider extends ServiceProvider

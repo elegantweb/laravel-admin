@@ -2,7 +2,7 @@
 
 namespace Elegant\Admin\Http\Controllers;
 
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
