@@ -5,7 +5,6 @@ namespace Elegant\Admin\Http\Controllers\Auth;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 
 class ForgotPasswordController extends Controller
 {
@@ -20,7 +19,7 @@ class ForgotPasswordController extends Controller
     |
     */
 
-    use SendsPasswordResetEmails, ValidatesRequests;
+    use SendsPasswordResetEmails;
 
     /**
      * @inheritdoc

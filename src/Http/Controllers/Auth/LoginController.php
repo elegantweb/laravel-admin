@@ -4,9 +4,8 @@ namespace Elegant\Admin\Http\Controllers\Auth;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
@@ -21,7 +20,7 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers, ValidatesRequests;
+    use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.
