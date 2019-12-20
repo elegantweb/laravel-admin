@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Password;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\ResetsPasswords;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 
 class ResetPasswordController extends Controller
 {
@@ -23,7 +22,7 @@ class ResetPasswordController extends Controller
     |
     */
 
-    use ResetsPasswords, ValidatesRequests;
+    use ResetsPasswords;
 
     /**
      * Where to redirect users after resetting their password.
