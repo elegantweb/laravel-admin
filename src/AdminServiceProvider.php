@@ -43,6 +43,12 @@ class AdminServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
 
         $this->registerViewComposers();
+
+        $this->registerRouteMiddleware();
+
+        if ($this->app->runningInConsole()) {
+            $this->registerConsole();
+        }
     }
 
     /**
@@ -53,12 +59,6 @@ class AdminServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/admin.php', 'admin');
-
-        $this->registerRouteMiddleware();
-
-        if ($this->app->runningInConsole()) {
-            $this->registerConsole();
-        }
     }
 
     /**
