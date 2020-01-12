@@ -21,13 +21,6 @@ class InstallCommand extends Command
     protected $description = 'Install the admin package';
 
     /**
-     * Install directory.
-     *
-     * @var string
-     */
-    protected $directory = '';
-
-    /**
      * Execute the console command.
      *
      * @return void
