@@ -3,7 +3,7 @@
 </li>
 
 <li>
-    <a href="{{ url('/') }}" target="_blank">View Website</a>
+    <a href="{{ url('/') }}" target="_blank">{{ trans('admin::messages.view_website') }}</a>
 </li>
 
 <li class="dropdown user user-menu">
