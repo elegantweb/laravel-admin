@@ -18,6 +18,7 @@ return [
     'notifications' => 'Notifications',
     'all' => 'All',
     'view_all' => 'View All',
+    'view_website' => 'View Website',
     'list' => 'List',
     'unread' => 'Unread',
 
