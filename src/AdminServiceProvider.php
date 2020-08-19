@@ -86,7 +86,7 @@ class AdminServiceProvider extends ServiceProvider
     }
 
     /**
-     * Bootstrap console related dependencies.
+     * Bootstrap console related services.
      *
      * @return void
      */
