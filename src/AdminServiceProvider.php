@@ -30,7 +30,7 @@ class AdminServiceProvider extends ServiceProvider
     ];
 
     /**
-     * Boot the service provider.
+     * Bootstrap any application services.
      *
      * @return void
      */
@@ -47,12 +47,12 @@ class AdminServiceProvider extends ServiceProvider
         $this->registerRouteMiddleware();
 
         if ($this->app->runningInConsole()) {
-            $this->registerConsole();
+            $this->bootConsole();
         }
     }
 
     /**
-     * Register the service provider.
+     * Register any application services.
      *
      * @return void
      */
@@ -86,11 +86,11 @@ class AdminServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register console related dependencies.
+     * Bootstrap console related dependencies.
      *
      * @return void
      */
-    protected function registerConsole()
+    protected function bootConsole()
     {
         $this->registerPublishableResources();
         $this->registerConsoleCommands();
