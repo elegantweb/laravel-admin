@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/', 'DashboardController@index')->name('dashboard');
+Route::get('/', 'DashboardController@show')->name('dashboard');
 
 Route::get('notifications', 'NotificationController@index')->name('notifications.index');
 
