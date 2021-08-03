@@ -1,5 +1,5 @@
 <div class="box box-{{ $varient ?? 'default' }} {{ $class ?? '' }}">
-    <div class="box-header with-border">
+    <div class="box-header {{ (!isset($borderedHeader) || $borderedHeader) ? 'with-border' : '' }}">
         <h3 class="box-title">{{ $title ?? '' }}</h3>
         <div class="box-tools pull-right">
             {{ $tools ?? '' }}
