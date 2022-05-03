@@ -26,7 +26,7 @@
         <div class="tab-pane active">
             <ul class="notifications-nav nav nav-pills nav-stacked">
                 @forelse ($notifications as $notification)
-                    <li>@include(sprintf('admin::notifications.%s', kebab_case(class_basename($notification->type))))</li>
+                    <li>@include(sprintf('admin::notifications.%s', Str::kebab(class_basename($notification->type))))</li>
                 @empty
                     <li class="nav-text">No notifications.</li>
                 @endforelse
