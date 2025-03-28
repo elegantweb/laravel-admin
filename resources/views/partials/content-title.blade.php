@@ -1,4 +1,1 @@
-<h1>
-    @yield('title')
-    <small>@yield('description')</small>
-</h1>
+<h3 class="mb-0">@yield('title')</h3>

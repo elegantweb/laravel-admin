@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="{{ asset('vendor/admin/css/admin.css') }}">
     @stack('styles')
 </head>
-<body class="{{ config('admin.panel.skin') }} {{ join(' ', config('admin.panel.layout')) }} @yield('body-class')">
-    @include('admin::partials.body')
+<body class="@yield('body-class')">
+    @yield('content')
     <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js" integrity="sha256-dghWARbRe2eLlIJ56wNB+b760ywulqK3DzZYEpsg2fQ=" crossorigin="anonymous"></script>
     <script src="{{ asset('vendor/admin/components/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('vendor/admin/components/overlayscrollbars/browser/overlayscrollbars.browser.es6.min.js') }}"></script>

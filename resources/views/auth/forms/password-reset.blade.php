@@ -1,16 +1,9 @@
-@extends('admin::auth.layouts.base')
-
-@section('title', trans('admin::messages.reset_password'))
-@section('message', trans('admin::messages.reset_password_page_message'))
-
-@section('content')
 <form method="POST" action="{{ route('admin.password.request') }}">
-    {{ csrf_field() }}
+    @csrf
     <input type="hidden" name="token" value="{{ $token }}">
 
     <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
         <input type="email" class="form-control" name="email" placeholder="{{ trans('admin::messages.email') }}" value="{{ old('email') }}" required autofocus>
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         @if ($errors->has('email'))
             <span class="help-block">
                 {{ $errors->first('email') }}
@@ -18,23 +11,21 @@
         @endif
     </div>
 
-    <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-        <input type="password" class="form-control" name="password" placeholder="{{ trans('admin::messages.passowrd') }}" required>
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+    <div class="mb-3">
+        <input type="password" class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}" name="password" placeholder="{{ trans('admin::messages.passowrd') }}" required>
         @if ($errors->has('password'))
-            <span class="help-block">
+            <div class="invalid-feedback">
                 {{ $errors->first('password') }}
-            </span>
+            </div>
         @endif
     </div>
 
-    <div class="form-group has-feedback{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-        <input type="password" class="form-control" name="password" placeholder="{{ trans('admin::messages.password_confirmation') }}" required>
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+    <div class="mb-3">
+        <input type="password" class="form-control {{ $errors->has('password_confirmation') ? 'is-invalid' : '' }}" name="password" placeholder="{{ trans('admin::messages.password_confirmation') }}" required>
         @if ($errors->has('password_confirmation'))
-            <span class="help-block">
+            <div class="invalid-feedback">
                 {{ $errors->first('password_confirmation') }}
-            </span>
+            </div>
         @endif
     </div>
 
@@ -46,4 +37,3 @@
         </div>
     </div>
 </form>
-@endsection

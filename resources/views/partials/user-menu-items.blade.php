@@ -1,15 +1,15 @@
-<!-- User image -->
-<li class="user-header">
-    <img src="{{ sprintf('https://www.gravatar.com/avatar/%s?d=mp&s=%s', md5(strtolower(trim(Auth::user()->email))), 90) }}" class="img-circle" alt="User Image">
+<!--begin::User Image-->
+<li class="user-header text-bg-primary">
+    <img src="{{ asset('vendor/admin/img/user.png') }}" class="rounded-circle shadow" alt="User Image" />
     <p>
         {{ Auth::user()->name }}
         <small>Member since {{ Auth::user()->created_at->format('M. Y') }}</small>
     </p>
 </li>
+<!--end::User Image-->
 
-<!-- Menu Footer-->
-<li class="user-footer">
-    <div class="text-center">
-        <a href="{{ route('admin.logout') }}" class="btn btn-default btn-flat">{{ trans('admin::messages.logout') }}</a>
-    </div>
+<!--begin::Menu Footer-->
+<li class="user-footer text-center">
+    <a href="{{ route('admin.logout') }}" class="btn btn-default btn-flat">Sign out</a>
 </li>
+<!--end::Menu Footer-->

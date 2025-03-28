@@ -1,46 +1,40 @@
-@extends('admin::layouts.base')
+@extends('admin::layouts.panel')
 
 @section('title', trans('admin::messages.notifications'))
 
 @push('breadcrumb')
-<li class="active">
-    {{ trans('admin::messages.notifications') }}
-</li>
+    <li class="breadcrumb-item active">
+        {{ trans('admin::messages.notifications') }}
+    </li>
 @endpush
 
 @section('content')
-<div class="nav-tabs-custom">
     <ul class="nav nav-tabs" role="tablist">
-        <li class="{{ $all ? '' : 'active' }}">
-            <a href="{{ route('admin.notifications.index') }}">
+        <li class="nav-item">
+            <a href="{{ route('admin.notifications.index') }}" class="nav-link {{ $all ? '' : 'active' }}">
                 {{ trans('admin::messages.unread') }}
             </a>
         </li>
-        <li class="{{ $all ? 'active' : '' }}">
-            <a href="{{ route('admin.notifications.index', ['all' => '1']) }}">
+        <li class="nav-item">
+            <a href="{{ route('admin.notifications.index', ['all' => '1']) }}" class="nav-link {{ $all ? 'active' : '' }}">
                 {{ trans('admin::messages.all') }}
             </a>
         </li>
     </ul>
-    <div class="tab-content no-padding">
-        <div class="tab-pane active">
-            <ul class="notifications-nav nav nav-pills nav-stacked">
-                @forelse ($notifications as $notification)
-                    <li>@include(sprintf('admin::notifications.%s', Str::kebab(class_basename($notification->type))))</li>
-                @empty
-                    <li class="nav-text">No notifications.</li>
-                @endforelse
-            </ul>
-        </div>
-    </div>
+
+    <ul class="list-group">
+        @forelse ($notifications as $notification)
+            <li class="list-group-item">
+                @include(sprintf('admin::notifications.%s', Str::kebab(class_basename($notification->type))))
+            </li>
+        @empty
+            <li class="list-group-item">
+                No notifications.
+            </li>
+        @endforelse
+    </ul>
+
     @if ($all)
-    <div class="tab-content">
-        <div class="tab-pane active">
-            <div class="clearfix">
-                {{ $notifications->links('admin::pagination.simple-default') }}
-            </div>
-        </div>
-    </div>
+        {{ $notifications->links('admin::pagination.simple-default') }}
     @endif
-</div>
 @endsection

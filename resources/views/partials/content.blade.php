@@ -1,7 +1,10 @@
-<div class="content-wrapper">
-    @include('admin::partials.content-header')
-    <section class="content">
+<!--begin::App Content-->
+<div class="app-content">
+    <!--begin::Container-->
+    <div class="container-fluid">
         @include('admin::partials.status')
         @yield('content')
-    </section>
+    </div>
+    <!--end::Container-->
 </div>
+<!--end::App Content-->
