@@ -19,17 +19,16 @@
         @endif
     </div>
 
-    <div class="row">
-        <div class="col-8">
-            <div class="form-check">
-                <input type="checkbox" id="remember" class="form-check-input" name="remember" @checked(old('remember'))>
-                <label class="form-check-label" for="remember">{{ trans('admin::messages.rememeber_me') }}</label>
-            </div>
+    <div class="mb-3">
+        <div class="form-check">
+            <input type="checkbox" id="remember" class="form-check-input" name="remember" @checked(old('remember'))>
+            <label class="form-check-label" for="remember">{{ trans('admin::messages.rememeber_me') }}</label>
         </div>
-        <div class="col-4">
-            <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary">{{ trans('admin::messages.login') }}</button>
-            </div>
-        </div>
+    </div>
+
+    <div class="d-grid">
+        <button type="submit" class="btn btn-primary">
+            {{ trans('admin::messages.login') }}
+        </button>
     </div>
 </form>

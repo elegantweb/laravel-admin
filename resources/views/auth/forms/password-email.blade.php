@@ -10,11 +10,9 @@
         @endif
     </div>
 
-    <div class="row">
-        <div class="col-8 col-offset-4">
-            <button type="submit" class="btn btn-primary">
-                {{ trans('admin::messages.send_rest_password_link') }}
-            </button>
-        </div>
+    <div>
+        <button type="submit" class="btn btn-primary">
+            {{ trans('admin::messages.send_rest_password_link') }}
+        </button>
     </div>
 </form>
