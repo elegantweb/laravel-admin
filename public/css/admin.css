@@ -1,13 +1,3 @@
-.nav-text {
-    padding: 10px 15px;
-}
-
-.mailbox-attachment-info {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
 /* DataTables */
 
 table.dataTable thead > tr > th {
@@ -43,12 +33,4 @@ div.table-responsive > table.dataTable {
 
 .table-layout-fixed {
     table-layout: fixed !important;
-}
-
-.display-inline {
-    display: inline !important;
-}
-
-.display-inline-block {
-    display: inline-block !important;
 }

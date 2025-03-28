@@ -7,7 +7,7 @@
     </div>
     <!--end::To the end-->
     <!--begin::Copyright-->
-    {!! trans('admin::messages.copyright', ['date' => date('Y')]) !!}
+    {!! trans('admin::messages.copyright', ['date' => date('Y'), 'name' => config('app.name'), 'url' => config('app.url')]) !!}
     <!--end::Copyright-->
 </footer>
 <!--end::Footer-->

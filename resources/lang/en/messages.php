@@ -25,6 +25,6 @@ return [
     'login_page_message' => 'Login to start your session',
     'reset_password_page_message' => 'Reset your password',
 
-    'copyright' => '<strong>Copyright © :date <a href="https://elegantweb.ir" target="_blank">Elegant Web</a>.</strong> All rights reserved.',
+    'copyright' => '<strong>Copyright © :date <a href=":url" target="_blank">:name</a>.</strong> All rights reserved.',
 
 ];

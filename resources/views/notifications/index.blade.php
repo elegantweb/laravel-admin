@@ -22,7 +22,7 @@
         </li>
     </ul>
 
-    <ul class="list-group mt-2">
+    <ul class="list-group mt-4">
         @forelse ($notifications as $notification)
             <li class="list-group-item">
                 @include(sprintf('admin::notifications.%s', Str::kebab(class_basename($notification->type))))
@@ -35,6 +35,8 @@
     </ul>
 
     @if ($all)
-        {{ $notifications->links('admin::pagination.simple-default') }}
+        <div class="mt-4">
+            {{ $notifications->links('admin::pagination.simple-default') }}
+        </div>
     @endif
 @endsection
