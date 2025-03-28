@@ -22,6 +22,11 @@ src
 sass
 scss
 less
+lib
+
+# typescript
+*.ts
+types
 
 # examples
 example
@@ -58,7 +63,13 @@ wercker.yml
 .travis.yml
 .zuul.yml
 .codeclimate.yml
+.prettierrc
+.browserslistrc
+.astro
 
 # misc
 *.md
 *.markdown
+*.zip
+*.map
+*.flow

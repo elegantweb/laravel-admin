@@ -23,8 +23,8 @@ return [
     ],
 
     'panel' => [
-        'skin' => 'skin-blue-light',
-        'layout' => ['sidebar-mini'],
+        'skin' => null,
+        'layout' => ['sidebar-mini', 'layout-fixed'],
 
         'routes' => [
             'prefix' => '',

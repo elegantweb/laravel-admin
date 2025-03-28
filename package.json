@@ -1,8 +1,12 @@
 {
     "private": true,
     "dependencies": {
-        "admin-lte": "2.4.*",
-        "datatables.net": "^1.10.19",
-        "datatables.net-bs": "^1.10.19"
+        "@popperjs/core": "^2.11.8",
+        "admin-lte": "4.0.0-beta3",
+        "bootstrap": "^5.3.3",
+        "bootstrap-icons": "^1.11.3",
+        "datatables.net": "^1.13.11",
+        "datatables.net-bs5": "^1.13.11",
+        "overlayscrollbars": "^2.10.1"
     }
 }

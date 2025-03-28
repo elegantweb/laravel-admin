@@ -1,15 +1,11 @@
-<nav class="navbar navbar-static-top">
-    <!-- Sidebar toggle button-->
-    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-    </a>
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        @include('admin::partials.navbar-left-items')
+    </ul>
 
-    <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-            @include('admin::partials.navbar-items')
-        </ul>
-    </div>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+        @include('admin::partials.navbar-right-items')
+    </ul>
 </nav>
