@@ -3,7 +3,7 @@
     <!--begin::Sidebar Brand-->
     <div class="sidebar-brand">
         <!--begin::Brand Link-->
-        <a href="./index.html" class="brand-link">
+        <a href="{{ route('admin.dashboard') }}" class="brand-link">
             <!--begin::Brand Image-->
             <img src="{{ asset(config('admin.brand_img')) }}" alt="Logo" class="brand-image opacity-75 shadow" />
             <!--end::Brand Image-->

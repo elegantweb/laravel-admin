@@ -5,5 +5,5 @@
 </li>
 
 <li class="nav-item d-none d-md-block">
-    <a href="{{ url('/') }}" class="nav-link" target="_blank">Website</a>
+    <a href="{{ url('/') }}" class="nav-link" target="_blank">View Website</a>
 </li>

@@ -1,4 +1,4 @@
-<ul class="pagination pagination-sm m-0 float-right" role="navigation">
+<ul class="pagination pagination-sm m-0" role="navigation">
     {{-- Previous Page Link --}}
     @if ($paginator->onFirstPage())
         <li class="page-item disabled">
