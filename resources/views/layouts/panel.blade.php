@@ -1,6 +1,6 @@
 @extends('admin::layouts.base')
 
-@section('body-class', join(' ', [...config('admin.panel.layout'), 'bg-body-tertiary']))
+@push('body-class', ' bg-body-tertiary ' . join(' ', config('admin.panel.layout')))
 
 @section('content')
     @include('admin::partials.body')
