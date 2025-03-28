@@ -4,7 +4,7 @@ return [
 
     'name' => 'Admin',
 
-    'brand_img' => asset('vendor/admin/img/logo.png'),
+    'brand_img' => 'vendor/admin/img/logo.png',
     'brand_text' => 'Elegant Admin',
 
     'routes' => [
