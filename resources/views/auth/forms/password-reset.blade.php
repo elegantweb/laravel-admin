@@ -29,7 +29,7 @@
         @endif
     </div>
 
-    <div>
+    <div class="d-grid">
         <button type="submit" class="btn btn-primary">
             {{ trans('admin::messages.reset_password') }}
         </button>

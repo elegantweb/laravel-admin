@@ -4,8 +4,8 @@ return [
 
     'name' => 'Admin',
 
-    'logo-lg' => '<b>Elegant</b> Admin',
-    'logo-mini' => '<b>E</b>Ad',
+    'brand_img' => asset('vendor/admin/img/logo.png'),
+    'brand_text' => 'Elegant Admin',
 
     'routes' => [
         'prefix' => env('ADMIN_URL_PREFIX', 'admin'),
@@ -23,8 +23,7 @@ return [
     ],
 
     'panel' => [
-        'skin' => null,
-        'layout' => ['sidebar-mini', 'layout-fixed'],
+        'layout' => ['layout-fixed', 'sidebar-expand-lg', 'sidebar-mini'],
 
         'routes' => [
             'prefix' => '',
